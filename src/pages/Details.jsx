@@ -22,10 +22,6 @@ const Details = () => {
     fetchAccount();
   }, [id]);
 
-  const handleBackClick = () => {
-    window.location.href = '/accounts'; // Navigate to /accounts and refresh the page
-  };
-
   if (error) return <p>{error}</p>;
   if (!account) return <p>Loading...</p>;
 
@@ -55,7 +51,7 @@ const Details = () => {
               </p>
               </div>
               <div className='p-4 text-right'>
-                <Link onClick={handleBackClick} className='px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none' >Back</Link>
+                <Link to='/accounts' className='px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none' >Back</Link>
               </div>
           </div>
         </div>
